@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/registrationCardRadius"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:elevation="5dp"
+    style="@style/parent"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/primaryTextColor"
+    tools:context=".PayActivity">
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+        <TextView
+            style="@style/headerText1"
+            android:text="Payment"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+        <TextView
+            android:id="@+id/pay_see_id"
+            style="@style/modifiedEditTextBlack" />
+        <TextView
+            android:id="@+id/pay_see_name"
+            style="@style/modifiedEditTextBlack" />
+        <TextView
+            android:id="@+id/pay_see_mobileno"
+            style="@style/modifiedEditTextBlack" />
+        <TextView
+            android:id="@+id/pay_see_amount"
+            style="@style/modifiedEditTextBlack"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                style="@style/modifiedEditTextBlack"
+                android:id="@+id/pay_amount_"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:hint="Amount:"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/all_S_Pay"
+            android:text="All Settlement"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/pay_ll2"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"/>
+        <Button
+            style="@style/loginButton"
+            android:layout_gravity="center"
+            android:id="@+id/pay_attachment"
+            android:text="Attachment"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            style="@style/parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            android:layout_height="0dp">
+            <TextView
+                android:id="@+id/pay_text_attachment_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF5722"
+                android:layout_gravity="right"/>
+            <Button
+                android:id="@+id/pay_attachment_cancel_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left"
+                android:background="@drawable/ic_cancel"
+                android:visibility="invisible"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Button
+            style="@style/loginButton"
+            android:id="@+id/pay"
+            android:layout_gravity="center"
+            android:text="Pay" />
+
+        <Button
+            style="@style/loginButton"
+            android:id="@+id/pay_cancel"
+            android:layout_gravity="center"
+            android:text="Cancel" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

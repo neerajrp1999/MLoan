@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllUserFragment">
+    <SearchView
+        android:id="@+id/allUserSearchBox"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="50dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:id="@+id/recycleviewAllUser"
+        android:layout_marginTop="50dp"/>
+
+</FrameLayout>
